@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf_8" />
+    <meta name="boutique" content="here" />
+    <title>denhen</title>
+    <style>
+         
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            margin:4%;
+            font-size: xx-large;
+        }
+        body.bright-mode {
+                    background-color: #cecece;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    color: #161515;
+                }
+        body.dark-mode {
+            background-color: #272424;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        /* nav***********************/
+        nav {
+            height: 8%;
+            z-index: 3;
+            background-color: #333333;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+            nav li {
+                list-style-type: none;
+            }
+
+                nav li a {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    text-decoration: none;
+                    color: white;
+                    transition: all 0.3s ease;
+                   
+                    
+                }
+            nav li a:hover {
+                color: purple;
+                font-size: 1.3em; 
+            }
+
+        button#toggleModeButton {
+            padding: 12px 24px; /* Adjust the padding */
+            background-color: #555;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px; /* Adjust the border radius */
+            transition: background-color 0.3s ease;
+            font-size: 1.2rem;
+}
+
+        button #toggleModeButton:hover {
+            background-color: #685a5a;
+        }
+        /* main***********************/    
+        main {
+            margin-top: 8%;
+            padding: 0 2%;
+        }
+
+        #Home, #AboutUs, #Partenariats, #Gallery {
+            margin-bottom: 45px;
+        }
+            #Home img{
+                position: relative;
+                left:40%;
+                margin-bottom: 5vh;
+                box-shadow : 10px -10px 20px  10px grey  ;
+                height:40vh;
+                
+            }
+
+            #Home p {
+
+                margin-top: 20px;
+                font-size: 2rem;
+                text-align: center;
+                /* Adjusted linear gradient background with reduced opacity */
+                background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 255, 0.5) 100%);
+                position: relative;
+                left:12%;
+                width:fit-content;
+            }
+
+            #AboutUs img {
+                display: block;
+                margin:  auto;
+                width: 50%;
+                max-width: 400px;
+            }
+
+            #Partenariats table {
+                width: 70%;
+                margin: 0 auto;
+                border-collapse: collapse;
+            }
+
+            #Partenariats h1{
+                margin-left: 0;
+            }
+
+            #Partenariats th, #Partenariats td {
+                padding: 10px;
+                border: 2px solid burlywood;
+            }
+
+        #Gallery {
+            text-align: center;
+        }
+
+            #Gallery img {
+                margin: 10px;
+                max-width: 100%;
+                height: auto;
+            }
+
+
+
+        footer {
+            background-color: white;
+            color: black;
+            padding: 20px 0;
+            text-align: center;
+        }
+            footer form {
+                width: 70%;
+                margin: 20px auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            input[type="text"],input[type="email"],input[type="password"],input[type="tel"],input[type="date"],select,input[type="file"] {
+                margin-bottom: 10px;
+                padding: 8px;
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+        
+           /* Style pour tous les boutons */
+            button,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                padding: 10px 20px;
+                margin: 10px 25px;
+                background-color: #333;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+
+            /* Style lorsque survolé */
+            button:hover,
+            input[type="button"]:hover,
+            input[type="reset"]:hover,
+            input[type="submit"]:hover {
+                background-color: #555;
+            }
+
+
+            /*shadow position auto  animation*/
+    </style>
+</head>
+
+<body class="dark-mode">
+    <nav>
+        <li class="link"><a href="#Home">Home</a></li>
+        <li class="link"><a href="#AboutUs">About Us</a></li>
+        <li class="link"><a href="#Partenariats">Partenariats</a></li>
+        <li class="link"><a href="#Gallery">Gallery</a></li>
+        <button id="toggleModeButton" onclick="toggleMode()">Toggle <span id="modeText">Bright</span> Mode</button>
+
+    </nav>
+
+    <main>
+        <div id="Home">
+            <br><br><br>
+            <img src="logo.jfif" alt="Company Logo" />
+            <p>Welcome to our website. Explore our high-quality products and services</p>
+            
+        </div>
+
+        <div id="AboutUs">
+            <br><br><br>
+            <h1>About Us</h1>
+            <p style="font-size:large">Our company was founded in 2000 with a mission to provide top-notch products to our customers.
+                Welcome to TechSavvy Solutions, your premier partner for innovative technology solutions. At TechSavvy, we are passionate about harnessing the power of technology to drive positive change and empower businesses to thrive in the digital age.
+
+                    Our vision at TechSavvy is to be the leading provider of cutting-edge technology solutions that transform businesses and enrich lives. We aspire to revolutionize the way businesses operate by leveraging the latest advancements in technology to drive efficiency, productivity, and growth.
+                    
+                    Our mission is to deliver exceptional value to our clients through tailored technology solutions that address their unique challenges and opportunities. We are committed to fostering long-term partnerships with our clients, understanding their needs, and providing innovative, reliable, and cost-effective solutions that exceed their expectations.
+                
+                
+            </p><br>
+            <img src="team_photo.jfif" alt="Team Photo" />
+        </div>
+
+        <div id="Partenariats">
+            <br><br><br>
+            <h1>Partenariats</h1>
+            <table>
+                <tr>
+                    <th>Partner Name</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>ESCT</td>
+                    <td>Since 1990,
+                        director mr Hassan,
+                        Department Chef Othman
+                    </td>
+                </tr>
+                <tr>
+                    <td>ISAMM</td>
+                    <td>Since 1997,
+                        director mr Ali,
+                        Department Chef Othman</td>
+                </tr>
+                <tr>
+                    <td>ESEN</td>
+                    <td>Since 2000,
+                        director mr Oubai,
+                        Department Chef Salah</td>
+                </tr>
+                <tr>
+                    <td>ISIE</td>
+                    <td>Since 2010,
+                        director mr Obai,
+                        Department Chef Salah</td>
+                </tr>
+                <tr>
+                    <td>SEEN</td>
+                    <td>Since 2000,
+                        director mr Oubai,
+                        Department Chef Salah</td>
+                </tr>
+                <tr>
+                    <td>ASIE</td>
+                    <td>Since 2008,
+                        director mr Chahd,
+                        Department Chef Narim</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="Gallery">
+            <br><br><br>
+            <h1>Gallery</h1>
+            <div>
+                <img src="gallery1.jfif" alt="photo 1" />
+                <img src="gallery2.jfif" alt="photo 2" />
+                <img src="gallery3.jfif" alt="photo 3" />
+                <img src="gallery4.jfif" alt="photo 4" />
+                <img src="gallery5.jfif" alt="photo 5" />
+                <img src="gallery6.jfif" alt="photo 6" />
+                <img src="gallery7.jfif" alt="photo 7" />
+                <img src="gallery8.jfif" alt="photo 8" />
+            </div>
+        </div>
+    </main>
+
+    
+    <footer>
+        <h1>Contact</h1>
+        
+        <button onclick="window.location.href = 'http://localhost/login.php';">Login</button>
+        <button onclick="window.location.href = 'http://localhost/signup.php';">Sign Up</button>
+        <button onclick="window.location.href = 'http://localhost/delete.php';">Delete Account</button>
+        <button onclick="logout()">Log Out</button>
+
+       
+        <form action="http://localhost/recruitment.php" method="post" onsubmit="return validateRecruitmentForm()" id="contact">
+            <fieldset>
+                <legend>Formulaire de recruitement</legend>
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Entrez votre nom" ><br>
+
+                <label for="tel">Telephone</label>
+                <input type="tel" id="tel" name="tel" placeholder="Entrez votre numero de telephone (8 chiffres)" pattern="[0-9]{8}" ><br>
+
+                <label for="birthdate">Date de naissance</label>
+                <input type="date" id="birthdate" name="birthdate" ><br>
+
+                <label for="sexe">Sexe</label>
+                <select id="sexe" name="sexe" >
+                    <option value="" disabled selected>Selectionner le sexe</option>
+                    <option value="masculin">Masculin</option>
+                    <option value="feminin">Feminin</option>
+                </select><br>
+
+                <label>Stage PFE</label>
+                <input type="radio" name="type" value="stage_pfe" ><br>
+
+                <label>Recrutement</label>
+                <input type="radio" name="type" value="recrutement" ><br>
+
+                <input type="submit" value="Envoyer">
+                <button type="reset">Reinitialiser</button>
+            </fieldset>
+        </form>
+
+        <script>
+            
+            //track login status
+            if (typeof isLoggedIn === 'undefined') {
+                // local storage
+                var isLoggedInLocalStorage = localStorage.getItem('isLoggedIn');
+                if (isLoggedInLocalStorage !== null) {
+                    isLoggedIn = JSON.parse(isLoggedInLocalStorage);
+                } else {
+                    isLoggedIn = false;
+                }
+            }
+            
+            function logout() {
+        
+                if (typeof isLoggedIn === 'undefined') {
+                    
+                    var isLoggedInLocalStorage = localStorage.getItem('isLoggedIn');
+                    if (isLoggedInLocalStorage !== null) {
+                        isLoggedIn = JSON.parse(isLoggedInLocalStorage);
+                    } else {
+                        isLoggedIn = false;
+                    }
+                }
+
+                if (isLoggedIn) {
+                        localStorage.setItem('isLoggedIn', false);
+                        alert('You have been logged out.');
+                } else {
+                        alert('You are not logged in.');
+                }
+        }
+
+            //  valider le formulaire 
+            function validateRecruitmentForm() {
+                if (!isLoggedIn) {
+                        alert("You must log in before submitting the form.");
+                        return false;
+                }
+
+                var name = document.getElementById("name").value.trim();
+                var tel = document.getElementById("tel").value.trim();
+                var birthdate = document.getElementById("birthdate").value.trim();
+                var sexe = document.getElementById("sexe").value.trim();
+                var type = document.querySelector('input[name="type"]:checked');
+
+           
+                if (name === "") {
+                    alert("Veuillez entrer votre nom.");
+                    return false;
+                }
+
+                if (tel === "") {
+                    alert("Veuillez entrer votre numero de téléphone.");
+                    return false;
+                }
+
+                if (birthdate === "") {
+                    alert("Veuillez entrer votre date de naissance.");
+                    return false;
+                }
+
+                if (cv === "") {
+                    alert("Veuillez choisir votre CV.");
+                    return false;
+                }
+
+                if (sexe === "") {
+                    alert("Veuillez selectionner votre sexe.");
+                    return false;
+                }
+
+                if (!type) {
+                    alert("Veuillez selectionner le type (stage PFE ou recrutement).");
+                    return false;
+                }
+                
+                alert("Formulaire envoye!");
+                return false;
+            }
+
+             //  button toggle mode
+            function toggleMode() {
+                const body = document.querySelector('body');
+                if ( body.classList.contains('bright-mode')) {
+                    body.classList.remove('bright-mode');
+                    body.classList.add('dark-mode');
+                    document.getElementById('modeText').textContent = 'Bright';
+                } else {
+                    body.classList.remove('dark-mode');
+                    body.classList.add('bright-mode');
+                    document.getElementById('modeText').textContent = 'Dark';
+                }
+            }
+        </script>
+
+    </footer>
+    
+</body>
+</html>
